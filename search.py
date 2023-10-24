@@ -10,14 +10,14 @@ products_id = {"Mateus Rosé Original": "5601012011500", "Mateus Sparkling": "56
 # Continente
 for key, value in products_id.items():
     # connection to the page
-    response = requests.get(url_garrafeirasoares + "resultado-da-pesquisa_36.html?term=" + value)
+    response = requests.get(url_continente + "pesquisa/?q=" + value)
     print(response.url)
     # check if the request was successful
     if response.status_code == 200:
         # parse the HTML of the page
         soup = BeautifulSoup(response.text, "html.parser")
         # find the link to the product page
-        link_element = soup.find("a", href=lambda href: href and href.startswith("https://www.continente.pt/produto/"))
+        link_element = soup.find("meta", href=lambda href: href and href.startswith("https://www.continente.pt/produto/"))
         # check if there is content
         if link_element:
             # get the link
@@ -47,12 +47,12 @@ for key, value in products_id.items():
                         print(f"Location: Portugal // TODO")
                         print(f"Product link: {link}\n")
                     else:
-                        print("Não foi possível acessar a página do artigo.\n")
+                        print("Não foi possível acessar a página do artigo5.\n")
                 else:
-                    print("Não foi possível acessar a página do artigo.\n")
+                    print("Não foi possível acessar a página do artigo4.\n")
             else:
-                print("Não foi possível acessar a página do artigo.\n")
+                print("Não foi possível acessar a página do artigo3.\n")
         else:
-            print("Não foi possível acessar a página do artigo.\n")
+            print("Não foi possível acessar a página do artigo2.\n")
     else:
-        print("Não foi possível acessar a página do artigo.\n")
+        print("Não foi possível acessar a página do artigo1.\n")
