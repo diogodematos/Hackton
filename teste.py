@@ -2,11 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 # URL da página do artigo
-url_continente = "https://www.continente.pt/"
-url_elcorteingles = "https://www.elcorteingles.pt/supermercado/"
 url_garrafeirasoares = "https://www.garrafeirasoares.pt/pt/"
-# products_id = ["5601012011500", "5601012001310", "5601012004427", "5601012011920"]
-products_id = {"Mateus Rosé Original": "5601012011500", "Mateus Sparkling": "5601012001310", "Trinca Bolotas Tinto": "5601012004427", "Papa Figos Branco": "5601012011920"}
+products_id = {"Mateus Rosé Original": "5601012011500", "Mateus Sparkling": "5601012001310", "Trinca Bolotas Tinto": "5601012004427", "Papa Figos Branco": "5601012011920", "Porto Graham's": "5010867410329"}
 # Continente
 # Função para extrair informações de uma página
 def extract_product_info(url, product_name):
@@ -39,6 +36,12 @@ def extract_product_info(url, product_name):
 
                 # Obtenha o preço
                 preco = soup.find("span", class_="current").text.strip()
+                discount = soup.find("span", class_="discount")
+                if discount:
+                    discount = discount.text.lstrip('-').strip()
+                else:
+                    discount = "N/A"
+
 
                 # Obtenha a hora atual com o fuso horário 'WEST'
                 now = datetime.now()
@@ -47,12 +50,12 @@ def extract_product_info(url, product_name):
                 # Imprima as informações extraídas
                 print("Store name: Garrafeira Soares")
                 print(f"Wine name: {product_name}")
-                print("Harvest year: N/A")
+                print(f"Harvest year: {product_info.get('Colheita', 'N/A')}")
                 print(f"Capacity: {product_info.get('Capacidade', 'N/A')}")
-                print("Discount: TODO")
+                print(f"Discount: {discount}")
                 print(f"Price and currency: {preco}")
                 print(f"Date of scraping: {date_string}")
-                print(f"Location: {product_info.get('País', 'N/A')}")
+                print("Local: Online Store")
                 print(f"Product link: {redirect_url}\n")
             else:
                 print("Failed to access the redirection URL.")
