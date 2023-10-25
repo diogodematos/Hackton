@@ -1,0 +1,39 @@
+Executive Summary: Wine Data Dashboard Project
+
+Sogrape Wine Company
+
+Presentation Date: October 25, 2023
+
+Introduction
+
+Sogrape Wine Company embarked on a project to develop a user-friendly dashboard designed to showcase data for four select wines: Mateus Rosé Original, Mateus Sparkling Rosé, Herdade do Peso Trinca Bolotas Tinto, and Casa Ferreirinha Papa Figos Branco. These wines were sourced from three prominent retailers: Continente Online, Supermercado El Corte Inglés, and Garrafeira Soares. The central aim of this initiative is to offer users a seamless experience, allowing them to filter and access information based on specific criteria.
+
+Methodology
+
+To achieve this goal, we initiated a web scraping script capable of collecting data from a variety of retailers. This script navigates through relevant websites, searches for the EAN codes associated with each wine, and systematically compiles pertinent data. The gathered data is then meticulously processed and stored within a dedicated database. It is subsequently showcased on the dashboard, affording users a user-friendly interface to explore the information at their discretion.
+
+Data Insights
+
+The data collected covers a broad spectrum of information, including grape varieties, regional origins, expert evaluations, pricing details, and more. Inevitably, we encountered challenges stemming from data format variations and access constraints, all of which were effectively surmounted through the development of customized solutions.
+
+Strategic Value
+
+Data analysis unveiled meaningful insights. Notably, we observed an increasing preference for wines from specific regions, distinct grape variety preferences among consumers, and pricing trends. These insights are poised to support data-driven decision-making across marketing and production departments.
+
+Outcomes and Future Plans
+
+The results of this project provide Sogrape with a comprehensive overview of the wine market. This enhanced understanding empowers data-driven decisions, aligns product strategies with consumer expectations, and fosters operational efficiency. We anticipate future expansions, including the incorporation of additional retailers, the introduction of wine images, and the integration of global market data.
+
+Conclusion
+
+The Wine Data Dashboard project marks a significant stride towards more informed decision-making at Sogrape Wine Company. The insights uncovered within this report harbor strategic opportunities and invaluable intelligence aimed at driving growth and bolstering competitiveness.
+
+Recommendations
+
+We recommend the continuation of this project, with an ongoing commitment to the monitoring and updating of websites and data sources. Additionally, we encourage the employment of insights to guide tailored marketing and production strategies.
+
+Acknowledgments
+
+We extend our appreciation to the dedicated team that diligently contributed to this project, as well as to the data sources that enabled the gathering of invaluable information.
+
+For further inquiries or in-depth discussions regarding this project, please feel free to contact Team 2(dcarrilh, fduque-a and dmeirele)!
